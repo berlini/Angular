@@ -1,3 +1,17 @@
-<input type="text" placeholder="Login" />
-<input type="password" placeholder="Senha" />
-<button (click)="login()">Login</button>
+<div id="login-container">
+    <div id="login-inner-container">
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Login" />
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Senha" type="password"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+        </div>
+    </div>
+</div>

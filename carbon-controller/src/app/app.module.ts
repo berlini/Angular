@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -12,11 +13,12 @@ import { ErrorModule } from './shared/error/error.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, // Módulo do browser
     CoreModule, // Contém os serviços e classes de negócios
     routing, // Contém definições de rotas da aplicação
-    LoginModule,
-    ErrorModule
+    LoginModule, // Página de login
+    ErrorModule, // Página de erro
+    BrowserAnimationsModule // Módulo de animações do browser
   ],
   providers: [],
   bootstrap: [AppComponent]
