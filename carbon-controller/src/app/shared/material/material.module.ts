@@ -8,7 +8,9 @@ import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   imports: [
     CommonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   exports: [
     MatFormFieldModule,
