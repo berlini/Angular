@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../../../core/services/authentication/authentication.service';
+import { Router } from '../../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -7,13 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  login: string;
+  password: string;
+
+  constructor(private authenticationService: AuthenticationService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  login() {
+  userLogin() {
     console.log('clicou');
+    
+    let result : Boolean = this.authenticationService.authenticateUser(this.login, this.password);
+    
+    if(result) {
+      this.router.navigate(['/campaings']);
+    }
+
+    console.log(result);
   }
 
 }

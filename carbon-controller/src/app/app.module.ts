@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing';
 import { LoginModule } from './features/login/login.module';
 import { ErrorModule } from './shared/error/error.module';
 
@@ -15,9 +15,9 @@ import { ErrorModule } from './shared/error/error.module';
   imports: [
     BrowserModule, // Módulo do browser
     CoreModule, // Contém os serviços e classes de negócios
-    routing, // Contém definições de rotas da aplicação
     LoginModule, // Página de login
     ErrorModule, // Página de erro
+    AppRoutingModule, // Contém definições de rotas da aplicação
     BrowserAnimationsModule // Módulo de animações do browser
   ],
   providers: [],

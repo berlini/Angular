@@ -4,14 +4,15 @@ import { CommonModule } from '@angular/common';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SharedModule } from '../../shared/shared.module';
+import { CampaignsModule } from '../campaigns/campaigns.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    CampaignsModule,
     LoginRoutingModule,
     SharedModule
   ],
-  declarations: [LoginPageComponent],
-  bootstrap: [LoginPageComponent]
+  declarations: [LoginPageComponent]
 })
 export class LoginModule { }
