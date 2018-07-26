@@ -18,4 +18,8 @@ export class CampaignPageComponent implements OnInit {
     this.campaigns = this.campaignService.getCampaigns();
   }
 
+  loadCampaign(campaign: Campaign) {
+    this.campaignService.loadCampaign(campaign);
+  }
+
 }

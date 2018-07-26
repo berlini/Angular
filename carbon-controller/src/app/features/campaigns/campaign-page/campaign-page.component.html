@@ -1,5 +1,5 @@
 <div class="div-flex">
-  <mat-card *ngFor="let campaign of campaigns" class="campaign-card">
+  <mat-card *ngFor="let campaign of campaigns" class="campaign-card" (click)="loadCampaign(campaign)">
       <mat-card-content>
         <div class="div-flex-p">
           <p>
