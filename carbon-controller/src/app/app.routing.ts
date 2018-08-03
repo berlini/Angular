@@ -4,7 +4,7 @@ import { ErrorPageComponent } from './shared/error/error-page/error-page.compone
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login'},
-  
+
   // Página de erro 404. Deve sempre ser a última no array
   { path: '**', component: ErrorPageComponent}
 ];
@@ -12,8 +12,7 @@ export const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(
-      routes,
-      { enableTracing: true } // <-- debugging purposes only
+      routes
     )
   ],
   exports: [

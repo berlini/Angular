@@ -1,0 +1,5 @@
+1 - Login page ok
+1.1 - Login validation ok
+2 - Campaign page ok
+3 - Header tamplate
+4 - Footer tamplate

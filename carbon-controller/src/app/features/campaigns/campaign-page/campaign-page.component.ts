@@ -20,6 +20,8 @@ export class CampaignPageComponent implements OnInit {
 
   loadCampaign(campaign: Campaign) {
     this.campaignService.loadCampaign(campaign);
+
+    this.router.navigate(['/shell']);
   }
 
 }
