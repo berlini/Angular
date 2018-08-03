@@ -25,6 +25,7 @@ export class LoginPageComponent implements OnInit {
       const result: Boolean = this.authenticationService.authenticateUser(this.login, this.password);
 
       if (result) {
+        this.error = false;
         this.router.navigate(['/campaings']);
       } else {
         this.error = true;
@@ -34,7 +35,7 @@ export class LoginPageComponent implements OnInit {
     }
 
     if (this.error) {
-      this.snackBar.open('Login ou senha incorretos');
+      this.snackBar.open('Login ou senha incorretos', '', {duration: 1000});
     }
   }
 

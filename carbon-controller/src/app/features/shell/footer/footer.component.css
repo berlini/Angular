@@ -1,7 +1,7 @@
 #footer-container {
     width: 100vw;
-    height: 10vh;
-    background: rgb(32, 32, 88);
+    height: 94px;
+    background: rgb(73, 73, 150);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -39,9 +39,9 @@
 }
 
 img {
-    width: 17%;
+    width: 153px;
 }
 
 p {
-    color: #b7f8ff;
+    color: white;
 }
