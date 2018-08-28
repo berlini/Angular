@@ -7,14 +7,23 @@ import { User } from '../../models/user';
 export class AuthenticationService {
 
   loggedUser: User;
+  userLogged: Boolean;
 
   constructor() { }
 
   getUserData(login: string): User {
-    return new User();
+    const user = new User();
+
+    user.login = login;
+    user.name = 'Teste';
+
+    return user;
   }
 
   authenticateUser(login: string, password: string): Boolean {
+    this.loggedUser = this.getUserData(login);
+    this.userLogged = true;
+
     return true;
   }
 }

@@ -1,14 +1,15 @@
-<header id="header-container">
+<div id="header-container">
     <div id="header-column1">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Relatórios</a></li>
-            <li><a href="#">Análise e BI</a></li>
+            <li><a routerLink="#" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="./reports" routerLinkActive="active">Relatórios</a></li>
+            <li><a routerLink="#" routerLinkActive="active">Análise e BI</a></li>
         </ul>
     </div>
     <div id="header-column2">
+        <p>Olá, {{userName}}</p>
         <a href="#">
             <img src="assets/images/user-icon.png" />
         </a>
     </div>
-</header>
+</div>

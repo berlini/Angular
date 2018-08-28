@@ -1,10 +1,6 @@
 #header-container {
     width: 100vw;
     background: rgb(73, 73, 150);
-    position: absolute;
-    right: 0;
-    top: 0;
-    left: 0;
     display: grid;
     grid-template-columns: 90% 10%;
 }
@@ -56,4 +52,12 @@ li a:hover {
 img:hover {
     -webkit-filter: opacity(.5) drop-shadow(grey);
     filter: opacity(.5) drop-shadow(grey);
+}
+
+p {
+    color: white;
+}
+
+.active {
+    background: rgb(35, 35, 78);
 }

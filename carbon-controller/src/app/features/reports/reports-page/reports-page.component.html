@@ -1,0 +1,11 @@
+<div class="div-flex">
+    <mat-card *ngFor="let report of reports" class="report-card" (click)="loadReport(report)">
+        <mat-card-content>
+          <div class="div-flex-p">
+            <p>
+              <b>{{report.name}}</b>
+            </p>
+          </div>
+        </mat-card-content>
+    </mat-card>
+  </div>

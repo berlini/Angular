@@ -35,7 +35,7 @@ export class LoginPageComponent implements OnInit {
     }
 
     if (this.error) {
-      this.snackBar.open('Login ou senha incorretos', '', {duration: 1000});
+      this.snackBar.open('Login ou senha incorretos', '', {duration: 1000, verticalPosition: 'top'});
     }
   }
 

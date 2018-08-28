@@ -6,11 +6,13 @@ import { ShellPageComponent } from './shell-page/shell-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../../shared/shared.module';
+import { ReportsModule } from '../reports/reports.module';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
+    ReportsModule,
     ShellRoutingModule
   ],
   declarations: [

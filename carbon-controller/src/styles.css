@@ -4,9 +4,10 @@
 
 html, body {
     height: 100vh;
+    min-height: 100vh;
 }
 
 body {
     margin: 0;
-    background-color: #b7f8ff
+    background-color: #68adaf
 }
