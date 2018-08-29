@@ -1,5 +1,11 @@
 1 - Login page ok
 1.1 - Login validation ok
 2 - Campaign page ok
-3 - Header tamplate
-4 - Footer tamplate
+3 - Header tamplate ok
+4 - Footer tamplate ok
+5 - Choose a report ok
+6 - Report page ok
+7 - Generate report on screen
+8 - Generate an excel report
+9 - Generate a pdf report
+10 - Use cache
