@@ -18,6 +18,10 @@ export class LoginPageComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService, private router: Router, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
+    if (this.authenticationService.userLogged) {
+      this.error = false;
+      this.router.navigate(['/campaings']);
+    }
   }
 
   userLogin() {

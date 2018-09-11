@@ -6,8 +6,8 @@ import { User } from '../../models/user';
 })
 export class AuthenticationService {
 
-  loggedUser: User;
-  userLogged: Boolean;
+  loggedUser: User = JSON.parse(localStorage.getItem('loggedUser'));
+  userLogged: Boolean = JSON.parse(localStorage.getItem('userLogged')) || false;
 
   constructor() { }
 
@@ -22,8 +22,19 @@ export class AuthenticationService {
 
   authenticateUser(login: string, password: string): Boolean {
     this.loggedUser = this.getUserData(login);
+    localStorage.setItem('loggedUser', JSON.stringify(this.userLogged));
+
     this.userLogged = true;
+    localStorage.setItem('userLogged', JSON.stringify(this.userLogged));
 
     return true;
+  }
+
+  logout() {
+    this.loggedUser = null;
+    localStorage.removeItem('loggedUser');
+
+    this.userLogged = false;
+    localStorage.removeItem('userLogged');
   }
 }

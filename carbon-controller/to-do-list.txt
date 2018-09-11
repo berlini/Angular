@@ -8,4 +8,4 @@
 7 - Generate report on screen
 8 - Generate an excel report
 9 - Generate a pdf report
-10 - Use cache
+10 - Use cookies ok
