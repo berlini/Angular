@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatTabsModule} from '@angular/material/tabs';
+import {MatInputModule,
+  MatButtonModule,
+  MatCardModule,
+  MatSnackBarModule,
+  MatTabsModule,
+  MatStepperModule,
+  MatSelectModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatTabsModule
+    MatTabsModule,
+    MatStepperModule,
+    MatSelectModule
   ],
   exports: [
     MatFormFieldModule,
@@ -23,7 +27,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatButtonModule,
     MatCardModule,
     MatSnackBarModule,
-    MatTabsModule
+    MatTabsModule,
+    MatStepperModule,
+    MatSelectModule
   ],
   declarations: []
 })

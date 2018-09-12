@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Report } from '../../../core/models/report';
 import { ReportService } from '../../../core/services/report/report.service';
 import { Router } from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-reports-page',
@@ -10,18 +11,31 @@ import { Router } from '@angular/router';
 })
 export class ReportsPageComponent implements OnInit {
 
-  public reports: Report[];
+  reports: Report[];
+  selectedReport: string;
 
-  constructor(private reportService: ReportService, private router: Router) { }
+  formSelectReportGroup: FormGroup;
+  formIntervalGroup: FormGroup;
+
+  constructor(private reportService: ReportService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.reports = this.reportService.getReports();
+
+    this.formSelectReportGroup = this.formBuilder.group({
+      reportControl: ['', Validators.required]
+    });
+
+    this.formIntervalGroup = this.formBuilder.group({
+      startDateControl: ['', Validators.required],
+      endDateControl: ['', Validators.required]
+    });
   }
 
-  loadReport(report: Report) {
-    this.reportService.loadReport(report);
+  generateReport() { }
 
-    this.router.navigate(['shell/reports/' + report.id]);
-  }
+  downloadReportExcel() { }
+
+  downloadReportPdf() { }
 
 }

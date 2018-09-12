@@ -1,11 +1,44 @@
-<div class="div-flex">
-    <mat-card *ngFor="let report of reports" class="report-card" (click)="loadReport(report)">
-        <mat-card-content>
-          <div class="div-flex-p">
-            <p>
-              <b>{{report.name}}</b>
-            </p>
-          </div>
-        </mat-card-content>
-    </mat-card>
-  </div>
+<mat-horizontal-stepper linear>
+  <mat-step label="Escolha o relatório" [stepControl]="formSelectReportGroup" [completed]="false">
+    <form [formGroup]="formSelectReportGroup">
+      <div class="container">
+        <mat-form-field>
+          <mat-select [(value)]="selectedReport" required formControlName="reportControl" placeholder="Selecione">
+            <mat-option *ngFor="let report of reports" value="{{report.id}}">{{report.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="container">
+        <button mat-raised-button color="primary" matStepperNext>Avançar</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step label="Defina um intervalo de datas" [stepControl]="formIntervalGroup" [completed]="false">
+    <form [formGroup]="formIntervalGroup">
+      <div class="container">
+        <mat-form-field>
+          <input matInput placeholder="Data Inicial" type="date" required formControlName="startDateControl">
+        </mat-form-field>
+      </div>
+      <div class="container">
+        <mat-form-field>
+          <input matInput placeholder="Data Final" type="date" required formControlName="endDateControl">
+        </mat-form-field>
+      </div>
+    </form>
+    <div class="container">
+      <button mat-raised-button matStepperPrevious>Voltar</button>
+      <button mat-raised-button color="primary" matStepperNext>Avançar</button>
+    </div>
+  </mat-step>
+  <mat-step label="Gere o relatório" [completed]="false">
+    <div class="container">
+      <button mat-raised-button color="primary" (click)="generateReport()">Gerar</button>
+      <button mat-raised-button (click)="downloadReportExcel()">Exportar Excel</button>
+      <button mat-raised-button (click)="downloadReportPdf()">Exportar PDF</button>
+    </div>
+    <div class="container">
+      <button mat-raised-button matStepperPrevious>Voltar</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
