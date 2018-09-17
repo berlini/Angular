@@ -12,10 +12,10 @@ export class ReportService {
 
   getReports(): Report[] {
     return [
-      {'id': 1, 'name': 'Report 1'},
-      {'id': 2, 'name': 'Report 2'},
-      {'id': 3, 'name': 'Report 3'},
-      {'id': 4, 'name': 'Report 4'}
+      {'id': 1, 'name': 'Report 1', 'headers': null, 'rows': null},
+      {'id': 2, 'name': 'Report 2', 'headers': null, 'rows': null},
+      {'id': 3, 'name': 'Report 3', 'headers': null, 'rows': null},
+      {'id': 4, 'name': 'Report 4', 'headers': null, 'rows': null}
     ];
   }
 
@@ -27,7 +27,7 @@ export class ReportService {
     if (this.activeReport !== undefined) {
       return this.activeReport;
     } else {
-      return {'name' : 'Report 1', 'id': 1};
+      return {'name' : 'Report 1', 'id': 1, 'headers': null, 'rows': null};
     }
   }
 }
