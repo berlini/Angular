@@ -3,6 +3,8 @@ import { Report } from '../../../core/models/report';
 import { ReportService } from '../../../core/services/report/report.service';
 import { Router } from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { MatDialog } from '@angular/material';
+import { ReportModalComponent } from '../report-modal/report-modal.component';
 
 @Component({
   selector: 'app-reports-page',
@@ -12,12 +14,12 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class ReportsPageComponent implements OnInit {
 
   reports: Report[];
-  selectedReport: string;
+  selectedReport: number;
 
   formSelectReportGroup: FormGroup;
   formIntervalGroup: FormGroup;
 
-  constructor(private reportService: ReportService, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private reportService: ReportService, private router: Router, private formBuilder: FormBuilder, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.reports = this.reportService.getReports();
@@ -32,7 +34,11 @@ export class ReportsPageComponent implements OnInit {
     });
   }
 
-  generateReport() { }
+  generateReport() {
+    const selectedReportModel = this.reportService.getReportData(this.selectedReport);
+
+    this.dialog.open(ReportModalComponent, { data: { report: selectedReportModel } });
+  }
 
   downloadReportExcel() { }
 
