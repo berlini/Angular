@@ -5,7 +5,7 @@
 4 - Footer tamplate ok
 5 - Choose a report ok
 6 - Report page ok
-7 - Generate report on screen
+7 - Generate report on screen ok
 8 - Generate an excel report
 9 - Generate a pdf report
 10 - Use cookies ok
