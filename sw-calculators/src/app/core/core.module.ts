@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderPageComponent } from './header-page/header-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     FooterPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HeaderPageComponent,
