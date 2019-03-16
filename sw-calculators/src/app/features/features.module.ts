@@ -5,11 +5,13 @@ import { FeaturesRoutingModule } from './features-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SixStarCalculatorComponent } from './six-star-calculator/six-star-calculator.component';
 import { SharedModule } from '../shared/shared.module';
+import { ExpCalculatorComponent } from './exp-calculator/exp-calculator.component';
 
 @NgModule({
   declarations: [
     HomePageComponent,
-    SixStarCalculatorComponent
+    SixStarCalculatorComponent,
+    ExpCalculatorComponent
   ],
   imports: [
     CommonModule,

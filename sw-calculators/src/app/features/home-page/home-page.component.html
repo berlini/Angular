@@ -1,3 +1,20 @@
-<p>
-  home-page works!
-</p>
+<div id="home-page-div" class="row justify-content-center align-items-center">
+  <a class="card card-white" routerLink="/six-star-calculator" [@hover]="is6StarHover ? 'true' : 'false'"
+  (mouseover)="is6StarHover=true" (mouseout)="is6StarHover=false">
+    
+    <div class="card-body">
+      <h5 class="card-title"><b>6* Calculator</b></h5>
+      <img class="card-img-top" src="assets/img-6-star.jpg" alt="Card image cap">
+      <p class="card-text">Calculate how many 2*, 3*, 4* and 5* you need to evolve your monster to 6*</p>
+    </div>
+  </a>
+  <a class="card card-blue" routerLink="/exp-calculator" [@hover]="isExpHover ? 'true' : 'false'"
+  (mouseover)="isExpHover=true" (mouseout)="isExpHover=false">
+    
+    <div class="card-body">
+      <h5 class="card-title"><b>Exp Calculator</b></h5>
+      <img class="card-img-top" src="assets/img-exp-booster.jpg" alt="Card image cap">
+      <p class="card-text">Calculate how many times you will to complete a dungeon to level a monster to max level</p>
+    </div>
+  </a>
+</div>

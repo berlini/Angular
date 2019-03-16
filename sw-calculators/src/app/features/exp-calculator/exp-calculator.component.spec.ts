@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderPageComponent } from './header-page.component';
+import { ExpCalculatorComponent } from './exp-calculator.component';
 
-describe('HeaderPageComponent', () => {
-  let component: HeaderPageComponent;
-  let fixture: ComponentFixture<HeaderPageComponent>;
+describe('ExpCalculatorComponent', () => {
+  let component: ExpCalculatorComponent;
+  let fixture: ComponentFixture<ExpCalculatorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderPageComponent ]
+      declarations: [ ExpCalculatorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderPageComponent);
+    fixture = TestBed.createComponent(ExpCalculatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
